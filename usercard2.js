@@ -23,5 +23,5 @@ let flipdata = function(){
 
     document.getElementById("il").src=displayobject.imgurl;
     document.getElementById("n").innerHTML=displayobject.name;
-    document.getElementById("d").innerHTML.displayobject.description;
+    document.getElementById("d").innerHTML=displayobject.description;
 }
