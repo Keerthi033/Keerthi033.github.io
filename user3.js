@@ -3,23 +3,12 @@ let kohlioldinfo = {
     name:"virat kohli",
     description: "Captain of Indian Cricket Team"
 }
-let kohlinewinfo = {
-    imgurl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Xd1MjNmBYBFy3lmxS5kapwbiJf0Q5MSCIg&usqp=CAU",
-    name:"kohli",
-    description: "Kohli in ICC Tournament"
 
-}
-let iskohliold=true;
 let displayobject;
-let flipdata = function(){
-    if (iskohliold==true){
-        displayobject=kohlinewinfo;
-        iskohliold=false;
-    }
-    else{
-        displayobject=kohlioldinfo;
-        iskohliold=true;
-    }
+let getRandomUser = function(){
+    fetch("https://randomuser.me/api")
+    .then(response=>response.json())
+    .then(data=>console.log(data))
 
     document.getElementById("il").src=displayobject.imgurl;
     document.getElementById("n").innerHTML=displayobject.name;
